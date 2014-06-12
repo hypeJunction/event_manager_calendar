@@ -34,6 +34,7 @@ function event_manager_calendar_init() {
 	elgg_extend_view('groups/tool_latest', 'event_manager/calendar/group_module');
 	
 	elgg_register_ajax_view('event_manager/calendar/widget/events');
+	elgg_register_ajax_view('event_manager/calendar/selectable');
 
 	/**
 	 * Widgets

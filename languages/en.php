@@ -11,6 +11,7 @@
 		'event_manager:calendar:owner' => '%s\'s Calendar',
 
 		'event_manager:calendar:day_empty' => 'No events on %s',
+		'event_manager:calendar:day_count' => '%s events on %s',
 		'event_manager:calendar:event:not_found' => 'Event not found',
 
 		'event_manager:calendar:pager:following' => 'show next %s &#9662;',
@@ -25,7 +26,7 @@
 		'event_manager:calendar:ended' => 'Ended %s',
 		'event_manager:calendar:ends_today' => 'Ends at %s',
 		'event_manager:calendar:ends' => 'Ends on %s at %s',
-		
+
 	);
 
 	add_translation('en', $english);

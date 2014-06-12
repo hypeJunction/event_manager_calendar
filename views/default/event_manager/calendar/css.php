@@ -72,3 +72,9 @@
 		display: inline-block;
 		text-align: right;
 	}
+	.calendar-widget-no-event .ui-state-default {
+		opacity: 0.8;
+	}
+	.calendar-widget-has-event .ui-state-default {
+		font-weight: bold;
+	}
