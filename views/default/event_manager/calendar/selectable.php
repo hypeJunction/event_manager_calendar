@@ -1,5 +1,7 @@
 <?php
 
+$entity = elgg_extract('entity', $vars, elgg_get_site_entity());
+
 $d = get_input('date');
 $m = get_input('month');
 $y = get_input('year');

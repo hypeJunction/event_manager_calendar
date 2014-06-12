@@ -97,7 +97,6 @@
 		elgg.ajax('ajax/view/event_manager/calendar/selectable', {
 			beforeSend: function() {
 				elgg.events.calendar.throttle = true;
-				$picker.addClass('calendar-widget-loader');
 			},
 			data: {
 				date: dt.getDate(),
@@ -109,7 +108,7 @@
 			success: function(data) {
 				$.extend(elgg.events.calendar.days, data);
 				elgg.events.calendar.throttle = false;
-				$picker.removeClass('calendar-widget-loader').datepicker('refresh');
+				$picker.datepicker('refresh');
 			}
 		});
 	};
