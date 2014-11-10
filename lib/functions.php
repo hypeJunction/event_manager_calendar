@@ -45,8 +45,11 @@ function event_manager_calendar_constrain_by_date($date = null, $options = array
 	$end = event_manager_calendar_get_day_end($date);
 
 	$dbprefix = elgg_get_config('dbprefix');
-	$mdbtws_name_id = add_metastring('calendar_start');
-	$mdbtwe_name_id = add_metastring('calendar_end');
+	/*
+	add_metastring preprecated in elgg 1.9. Now use elgg_get_metastring_id
+	*/
+	$mdbtws_name_id = elgg_get_metastring_id('calendar_start');
+	$mdbtwe_name_id = elgg_get_metastring_id('calendar_end');
 
 	$options['joins'][] = "JOIN {$dbprefix}metadata mdbtws ON mdbtws.entity_guid = e.guid AND mdbtws.name_id = $mdbtws_name_id";
 	$options['joins'][] = "JOIN {$dbprefix}metastrings mdbtwsv ON mdbtwsv.id = mdbtws.value_id";
